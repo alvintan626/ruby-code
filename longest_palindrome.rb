@@ -50,7 +50,6 @@ def longest_palindrome(string)
   end
 
   final = palin1
-  puts(final)
   puts(final[0].length)
 
 
@@ -61,14 +60,13 @@ def longest_palindrome(string)
 
 
       m = 0
-     while m < final.length-1
+    while m < final.length
       if final[m].length <= final[m+1].length
-        answer = final[m+1]
+        return final[m+1]
       end
       m = m + 1
       
     end
-    return answer
 
 
 end
@@ -105,7 +103,7 @@ puts("===============================================")
       (longest_palindrome('abba') == 'abba').to_s
     )
     puts(
-      'longest_palindrome("abcbdeffemadam") == "madam": ' +
-      (longest_palindrome('abcbdeffemadam') == 'madam').to_s
+      'longest_palindrome("abcbdeffe") == "effe": ' +
+      (longest_palindrome('abcbdeffe') == 'effe').to_s
     )
 puts("===============================================")
