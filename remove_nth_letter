@@ -1,0 +1,23 @@
+#Define a method that accepts two arguments, a string and an integer. The method should return a copy of the string with the nth letter removed.
+
+
+def remove_nth_letter(string, n)
+
+newstring = []
+
+i = 0
+while i < string.length
+
+  if i == n
+    i = i + 1
+  end
+
+  newstring.push(string[i])
+  puts(newstring)
+  i = i + 1
+end
+
+return newstring.join("")
+end
+
+remove_nth_letter("string", 3)
