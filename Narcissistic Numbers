@@ -1,0 +1,38 @@
+
+def narcis_nums(num)
+
+
+newnum = num.to_s
+final = []
+done = 0
+
+  i = 0
+  j = 0
+while j < newnum.length
+  answer = newnum[j].to_i
+  while i <  newnum.length - 1
+    
+    answer = answer * (newnum[j].to_i)
+    i = i + 1
+
+  end
+  final[j] = answer
+  done = done + final[j]
+  i = 0
+  j = j + 1
+end
+
+  return done
+
+end
+
+
+
+# These are tests to check that your code is working. After writing
+# your solution, they should all print true.
+
+puts("\nTests for #narcis_nums")
+puts("===============================================")
+    puts('narcis_nums(1) == 1: ' + (narcis_nums(153) == 153).to_s)
+    puts('narcis_nums(2) == 3: ' + (narcis_nums(1634) == 1634).to_s)
+puts("===============================================")
