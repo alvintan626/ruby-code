@@ -1,0 +1,60 @@
+# Write a function `bubble_sort(arr)` which will sort an array of
+# integers using the "bubble sort"
+# methodology. (http://en.wikipedia.org/wiki/Bubble_sort)
+#
+# Difficulty: 3/5
+
+def bubble_sort(arr)
+count = 0
+i = 0
+while i < arr.length - 1  
+  if arr[i] >= arr[i+1]
+    i = 0
+    break
+  end
+  i = i + 1
+  count = count + 1
+end
+
+if count == arr.length - 1
+  return arr
+else
+  count = 0
+end
+
+ 
+  j = 0
+  while j < arr.length - 1
+    if arr[j] > arr[j+1]
+      larger = arr[j]
+      smaller = arr[j+1]
+      arr[j] = smaller
+      arr[j+1] = larger
+    end
+  
+  j = j + 1
+  end
+
+
+end
+
+def compl(arr)
+
+  k= 0
+  while k < arr.length - 1
+    bubble_sort(arr)
+   
+    k = k + 1
+  end
+
+  return arr
+end
+
+puts(compl([5, 4, 3, 2, 1]))
+
+puts("\nTests for #bubble_sort")
+puts("===============================================")
+    puts "bubble_sort([]) == []: "  + (compl([]) == []).to_s
+    puts "bubble_sort([1]) == [1]: "  + (compl([1]) == [1]).to_s
+    puts "bubble_sort([5, 4, 3, 2, 1]) == [1, 2, 3, 4, 5]: "  + (compl([5, 4, 3, 2, 1]) == [1, 2, 3, 4, 5]).to_s
+puts("===============================================")
