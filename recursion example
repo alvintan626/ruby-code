@@ -1,0 +1,14 @@
+def f(n)
+
+  if n == 0 
+    return 0
+  end
+
+ # puts(f(n - 1))
+ 
+  return 1 + f(n - 1)
+
+end
+
+x = f(4)
+# puts(x)
