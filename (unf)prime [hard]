@@ -1,0 +1,47 @@
+# Write a method that, when given a number, returns the number of factors of that number (including the number itself) that are prime. You may wish to write two helper methods: prime?(n) and factors(n)
+
+def factors(n)
+
+factor = []
+i = n
+  while i > 0 
+   if n % i == 0
+      factor.push(i)
+   end
+  i = i - 1
+  end
+
+return factor
+
+end
+
+
+def prime?(n)
+
+  prime = []
+  i = 0
+
+  while i < factors(n).length 
+    if factors(n)[i] % 2 != 0 && factors(n)[i] != factors(n)[0] &&  factors(n)[i] != 1
+      prime.push(factors(n)[i])
+    end
+
+
+  i = i + 1
+  end
+  
+  return prime
+
+end
+
+
+
+def num_prime_factors(n)
+
+count = prime?(n).length
+
+return count
+
+end
+
+puts(num_prime_factors(12))
